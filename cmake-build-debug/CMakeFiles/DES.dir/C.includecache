@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiawei/Documents/CLionProjects/DES/des.c
+stdio.h
+-
+stdint.h
+-
+string.h
+-
+stdlib.h
+-
+des.h
+/home/jiawei/Documents/CLionProjects/DES/des.h
+
+/home/jiawei/Documents/CLionProjects/DES/des.h
+
