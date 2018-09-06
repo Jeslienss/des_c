@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jiawei/Desktop/des_c/des.c
+/home/jiawei/Documents/CLionProjects/DES/des.c
 stdio.h
 -
 stdint.h
@@ -18,9 +18,9 @@ stdlib.h
 inttypes.h
 -
 des.h
-/home/jiawei/Desktop/des_c/des.h
+/home/jiawei/Documents/CLionProjects/DES/des.h
 
-/home/jiawei/Desktop/des_c/des.h
+/home/jiawei/Documents/CLionProjects/DES/des.h
 stdint.h
 -
 

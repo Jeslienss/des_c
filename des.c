@@ -170,7 +170,7 @@ void genSubKey(uint64_t *binKey, uint64_t *subKey) {
 }
 
 
-void encodeData(uint64_t *subKey, uint64_t *m, uint64_t *c) {
+uint64_t proBlock(uint64_t *subKey, uint64_t *m) {
     uint64_t *ip = malloc(sizeof(uint64_t));
     uint64_t ln, rn, ln_1, rn_1, Ern_1, temp, local6bits, f, rl, ip_1;
     int i, j;
@@ -211,6 +211,38 @@ void encodeData(uint64_t *subKey, uint64_t *m, uint64_t *c) {
         rn_1 = rn;
     }
     rl = ((rn & 0xffffffff) << 32) | (ln & 0xffffffff);
+    return rl;
+}
+
+
+void encode(uint64_t *subKey, uint64_t *m, uint64_t *c) {
+    int i;
+    uint64_t rl = proBlock(subKey, m);
+    for (i = 0; i < 64; i++) {
+        *c <<= 1;
+        *c |= (rl >> (64 - iptable_1[i])) & 0x01;
+    }
+}
+
+
+void decode(uint64_t *subKey, uint64_t *m, uint64_t *c) {
+    int i;
+
+    printf("%jx\n", *m);
+
+    *m = (*m << 32) + (*m >> 32);
+
+    printf("%jx\n", *m);
+
+    uint64_t temp;
+    for (i = 0; i < 8; i++) {
+        temp = *(subKey + i);
+        *(subKey + i) = *(subKey + 15 - i);
+        *(subKey + 15 - i) = temp;
+    }
+
+    uint64_t rl = proBlock(subKey, m);
+    rl = (rl << 32) + (rl >> 32);
 
     for (i = 0; i < 64; i++) {
         *c <<= 1;
@@ -231,7 +263,14 @@ void des(char *key) {
     uint64_t *c = malloc(sizeof(uint64_t));
     *m = 0x0123456789ABCDEF;
 
-    encodeData(subKey, m, c);
+    encode(subKey, m, c);
+
+    //printf("%jx\n", *c);
+
+    *m = 0;
+    decode(subKey, c, m);
+
+    printf("%jx\n", *m);
 
     free(binKey);
     free(subKey);
