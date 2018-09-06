@@ -60,9 +60,9 @@ void convertStr2Hex(char *key, uint64_t *binKey) {
 
 uint64_t ariShift(uint64_t f, uint8_t t) {
     if (t == 1)
-        return ((f & (uint64_t)0x8000000) >> (uint64_t)27) | ((f << (uint64_t)1) & (uint64_t)0xfffffff);
+        return ((f & 0x8000000) >> 27) | ((f << 1) & 0xfffffff);
     else if (t == 2)
-        return ((f & (uint64_t)0xc000000) >> (uint64_t)26) | ((f << (uint64_t)2) & (uint64_t)0xfffffff);
+        return ((f & 0xc000000) >> 26) | ((f << 2) & 0xfffffff);
 }
 
 
@@ -78,11 +78,11 @@ void genPermutedKey(uint64_t *binKey, uint64_t *subKey) {
 
     for (i = 0; i < pc1_len; i++) {
         *pk <<= 1;
-        *pk |= (*binKey >> ((uint64_t)64 - pc1[i])) & (uint64_t)0x01;
+        *pk |= (*binKey >> (64 - pc1[i])) & 0x01;
     }
 
-    *(cd + 0) = (*pk >> (uint64_t)28) & (uint64_t)0xfffffff; // left 28 bits, c0
-    *(cd + 1) = *pk & (uint64_t)0xfffffff; // right 28 bits, d0
+    *(cd + 0) = (*pk >> 28) & 0xfffffff; // left 28 bits, c0
+    *(cd + 1) = *pk & 0xfffffff; // right 28 bits, d0
 
     for (i = 1; i <= 16; i++) {
         *(cd + 2 * i + 0) = ariShift(*(cd + 2 * (i - 1) + 0), shift_table[i - 1]);// c_n
@@ -90,10 +90,10 @@ void genPermutedKey(uint64_t *binKey, uint64_t *subKey) {
     }
 
     for (i = 1; i <= 16; i++) {
-        temp = (*(cd + 2 * i) << (uint64_t)28) | *(cd + 2 * i + 1);
+        temp = (*(cd + 2 * i) << 28) | *(cd + 2 * i + 1);
         for (j = 0; j < pc2_len; j++) {
             *(subKey + i - 1) <<= 1;
-            *(subKey + i - 1) |= (temp >> (uint64_t)(56 - pc2[j])) & (uint64_t)0x01;
+            *(subKey + i - 1) |= (temp >> (56 - pc2[j])) & 0x01;
         }
     }
 
