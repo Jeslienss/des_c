@@ -15,8 +15,12 @@ string.h
 -
 stdlib.h
 -
+inttypes.h
+-
 des.h
 /home/jiawei/Documents/CLionProjects/DES/des.h
 
 /home/jiawei/Documents/CLionProjects/DES/des.h
+stdint.h
+-
 

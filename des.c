@@ -6,67 +6,110 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+#include <inttypes.h>
 #include "des.h"
 
 
-void convertStr2Hex(char* key, uint8_t* binKey) {
+const uint8_t pc1[] = {57, 49, 41, 33, 25, 17, 9,
+                       1, 58, 50, 42, 34, 26, 18,
+                       10, 2, 59, 51, 43, 35, 27,
+                       19, 11, 3, 60, 52, 44, 36,
+                       63, 55, 47, 39, 31, 23, 15,
+                       7, 62, 54, 46, 38, 30, 22,
+                       14, 6, 61, 53, 45, 37, 29,
+                       21, 13, 5, 28, 20, 12, 4};
+
+
+const uint8_t shift_table[] = {1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1};
+
+
+const uint8_t pc2[] = {14, 17, 11, 24, 1, 5,
+                       3, 28, 15, 6, 21, 10,
+                       23, 19, 12, 4, 26, 8,
+                       16, 7, 27, 20, 13, 2,
+                       41, 52, 31, 37, 47, 55,
+                       30, 40, 51, 45, 33, 48,
+                       44, 49, 39, 56, 34, 53,
+                       46, 42, 50, 36, 29, 32,};
+
+const uint8_t ip[] = {58, 50, 42, 34, 26, 18, 10, 2,
+                      60, 52, 44, 36, 28, 20, 12, 4,
+                      62, 54, 46, 38, 30, 22, 14, 6,
+                      64, 56, 48, 40, 32, 24, 16, 8,
+                      57, 49, 41, 33, 25, 17, 9, 1,
+                      59, 51, 43, 35, 27, 19, 11, 3,
+                      61, 53, 45, 37, 29, 21, 13, 5,
+                      63, 55, 47, 39, 31, 23, 15, 7,};
+
+
+void convertStr2Hex(char *key, uint64_t *binKey) {
+    *binKey = 0;
     char hashStr2Num[] = "0123456789ABCDEF";
-    uint8_t i, j;
-    for (i = 0 ; i < strlen(key) / 2; i++) {
-        uint8_t front = 0, back = 0;
+    uint64_t i, j;
+    for (i = 0; i < strlen(key); i++) {
         for (j = 0; j < strlen(hashStr2Num); j++) {
-            if (*(key + i * 2) == hashStr2Num[j]) {
-                front = j;
+            if (*(key + i) == hashStr2Num[j]) {
+                *binKey <<= 4;
+                *binKey |= j;
                 break;
             }
         }
-        for (j = 0; j < strlen(hashStr2Num); j++) {
-            if (*(key + i * 2 + 1) == hashStr2Num[j]) {
-                back = j;
-                break;
-            }
-        }
-        *(binKey + i) = (front << 4) + back;
     }
 }
 
 
-void genPermutedKey(uint8_t* binKey) {
-    uint8_t pc1[] = {57,   49,    41,   33,    25,    17,    9,
-                     1,    58,    50,   42,    34,    26,   18,
-                     10,    2,    59,   51,    43,    35,   27,
-                     19,   11,     3,   60,    52,    44,   36,
-                     63,   55,    47,   39,    31,    23,   15,
-                     7,   62,    54,   46,    38,    30,   22,
-                     14,    6,    61,   53,    45,    37,   29,
-                     21,   13,     5,   28,   20,    12,    4};
-    uint8_t* pk = malloc(sizeof(uint8_t) * 7);
-    uint8_t* c0 = malloc()
-    uint8_t i, j, _index, temp;
-
-    for (i = 0; i < 7; i++) {
-        temp = 0;
-        for (j = 0; j< 8; j++) {
-            _index = pc1[i * 8 + j];
-            temp |= ((*(binKey + (_index - 1) / 8) >> ((_index % 8 == 0) ? 0:(8 - _index % 8))) & 1) << (7 - j);
-        }
-        *(pk + i) = temp;
-    }
-
+uint64_t ariShift(uint64_t f, uint8_t t) {
+    if (t == 1)
+        return ((f & (uint64_t)0x8000000) >> (uint64_t)27) | ((f << (uint64_t)1) & (uint64_t)0xfffffff);
+    else if (t == 2)
+        return ((f & (uint64_t)0xc000000) >> (uint64_t)26) | ((f << (uint64_t)2) & (uint64_t)0xfffffff);
 }
 
 
-void des(char* key) {
-    uint8_t* binKey = malloc(KEYLEN * sizeof(uint8_t) / 2);
+void genPermutedKey(uint64_t *binKey, uint64_t *subKey) {
+    uint64_t *pk = malloc(sizeof(uint64_t));
+    uint64_t *cd = malloc(sizeof(uint64_t) * (2 * 16 + 2));
+    //uint64_t *subKey = malloc(sizeof(uint64_t) * 16);
+    *pk = 0;
+    uint64_t i, j, temp;
+
+    int pc1_len = sizeof(pc1) / sizeof(uint8_t);
+    int pc2_len = sizeof(pc2) / sizeof(uint8_t);
+
+    for (i = 0; i < pc1_len; i++) {
+        *pk <<= 1;
+        *pk |= (*binKey >> ((uint64_t)64 - pc1[i])) & (uint64_t)0x01;
+    }
+
+    *(cd + 0) = (*pk >> (uint64_t)28) & (uint64_t)0xfffffff; // left 28 bits, c0
+    *(cd + 1) = *pk & (uint64_t)0xfffffff; // right 28 bits, d0
+
+    for (i = 1; i <= 16; i++) {
+        *(cd + 2 * i + 0) = ariShift(*(cd + 2 * (i - 1) + 0), shift_table[i - 1]);// c_n
+        *(cd + 2 * i + 1) = ariShift(*(cd + 2 * (i - 1) + 1), shift_table[i - 1]);// d_n
+    }
+
+    for (i = 1; i <= 16; i++) {
+        temp = (*(cd + 2 * i) << (uint64_t)28) | *(cd + 2 * i + 1);
+        for (j = 0; j < pc2_len; j++) {
+            *(subKey + i - 1) <<= 1;
+            *(subKey + i - 1) |= (temp >> (uint64_t)(56 - pc2[j])) & (uint64_t)0x01;
+        }
+    }
+
+    free(pk);
+    free(cd);
+}
+
+
+void des(char *key) {
+    uint64_t *binKey = malloc(sizeof(uint64_t));
+    uint64_t *subKey = malloc(sizeof(uint64_t) * 16);
     convertStr2Hex(key, binKey);
-    genPermutedKey(binKey);
-    int i;
 
+    //printf("%jx\n", *binKey); // using this format to print uint64_t number
+    genPermutedKey(binKey, subKey);
 
-    //uint8_t _index;
-    //for (_index = 1; _index <= 64; _index ++)
-    //    printf("%d", (*(binKey + (_index - 1) / 8) >> ((_index % 8 == 0) ? 0:(8 - _index % 8))) & 1);
+    free(binKey);
+    free(subKey);
 }
-
-//1111000 0110011 0010101 0101111 0101010 1011001 1001111 0001111
-//1111000 0110011 0010101 0101111 0101010 1011001 1001111 0001111
