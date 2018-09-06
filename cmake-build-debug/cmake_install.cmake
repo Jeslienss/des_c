@@ -1,4 +1,4 @@
-# Install script for directory: /home/jiawei/Documents/CLionProjects/DES
+# Install script for directory: /home/jiawei/Desktop/des_c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jiawei/Desktop/des_c/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

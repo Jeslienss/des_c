@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jiawei/Clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/jiawei/Clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiawei/Documents/CLionProjects/DES
+CMAKE_SOURCE_DIR = /home/jiawei/Desktop/des_c
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jiawei/Desktop/des_c/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DES.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/DES.dir/flags.make
 
 CMakeFiles/DES.dir/main.c.o: CMakeFiles/DES.dir/flags.make
 CMakeFiles/DES.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DES.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DES.dir/main.c.o   -c /home/jiawei/Documents/CLionProjects/DES/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DES.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DES.dir/main.c.o   -c /home/jiawei/Desktop/des_c/main.c
 
 CMakeFiles/DES.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DES.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jiawei/Documents/CLionProjects/DES/main.c > CMakeFiles/DES.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jiawei/Desktop/des_c/main.c > CMakeFiles/DES.dir/main.c.i
 
 CMakeFiles/DES.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DES.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jiawei/Documents/CLionProjects/DES/main.c -o CMakeFiles/DES.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jiawei/Desktop/des_c/main.c -o CMakeFiles/DES.dir/main.c.s
 
 CMakeFiles/DES.dir/des.c.o: CMakeFiles/DES.dir/flags.make
 CMakeFiles/DES.dir/des.c.o: ../des.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DES.dir/des.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DES.dir/des.c.o   -c /home/jiawei/Documents/CLionProjects/DES/des.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DES.dir/des.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DES.dir/des.c.o   -c /home/jiawei/Desktop/des_c/des.c
 
 CMakeFiles/DES.dir/des.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DES.dir/des.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jiawei/Documents/CLionProjects/DES/des.c > CMakeFiles/DES.dir/des.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jiawei/Desktop/des_c/des.c > CMakeFiles/DES.dir/des.c.i
 
 CMakeFiles/DES.dir/des.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DES.dir/des.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jiawei/Documents/CLionProjects/DES/des.c -o CMakeFiles/DES.dir/des.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jiawei/Desktop/des_c/des.c -o CMakeFiles/DES.dir/des.c.s
 
 # Object files for target DES
 DES_OBJECTS = \
@@ -95,7 +95,7 @@ DES: CMakeFiles/DES.dir/main.c.o
 DES: CMakeFiles/DES.dir/des.c.o
 DES: CMakeFiles/DES.dir/build.make
 DES: CMakeFiles/DES.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable DES"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable DES"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DES.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/DES.dir/clean:
 .PHONY : CMakeFiles/DES.dir/clean
 
 CMakeFiles/DES.dir/depend:
-	cd /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiawei/Documents/CLionProjects/DES /home/jiawei/Documents/CLionProjects/DES /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/DES.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jiawei/Desktop/des_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiawei/Desktop/des_c /home/jiawei/Desktop/des_c /home/jiawei/Desktop/des_c/cmake-build-debug /home/jiawei/Desktop/des_c/cmake-build-debug /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/DES.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DES.dir/depend
 

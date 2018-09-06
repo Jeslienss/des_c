@@ -1,4 +1,4 @@
-The system is: Linux - 4.15.0-33-generic - x86_64
+The system is: Linux - 4.13.0-32-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,75 +10,75 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/3.12.0/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/3.12.0/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_992d3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_992d3.dir/build.make CMakeFiles/cmTC_992d3.dir/build
-make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_992d3.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_992d3.dir/testCCompiler.c.o   -c /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_992d3
-/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_992d3.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_992d3.dir/testCCompiler.c.o  -o cmTC_992d3 
-make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_cf3bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf3bc.dir/build.make CMakeFiles/cmTC_cf3bc.dir/build
+make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf3bc.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cf3bc.dir/testCCompiler.c.o   -c /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_cf3bc
+/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf3bc.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_cf3bc.dir/testCCompiler.c.o  -o cmTC_cf3bc 
+make[1]: Leaving directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d6f7f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d6f7f.dir/build.make CMakeFiles/cmTC_d6f7f.dir/build
-make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o   -c /home/jiawei/Clion/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_d6f7f
-/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6f7f.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o  -o cmTC_d6f7f 
+Run Build Command:"/usr/bin/make" "cmTC_f95dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f95dc.dir/build.make CMakeFiles/cmTC_f95dc.dir/build
+make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o   -c /home/jiawei/clion-2018.2.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_f95dc
+/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f95dc.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o  -o cmTC_f95dc 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.10' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.1-2ubuntu1~16.04' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
+gcc version 5.4.1 20160904 (Ubuntu 5.4.1-2ubuntu1~16.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6f7f' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6iE6BZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d6f7f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f95dc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccL0zFwH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f95dc /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d6f7f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d6f7f.dir/build.make CMakeFiles/cmTC_d6f7f.dir/build]
-  ignore line: [make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o   -c /home/jiawei/Clion/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_d6f7f]
-  ignore line: [/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6f7f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o  -o cmTC_d6f7f ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f95dc/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f95dc.dir/build.make CMakeFiles/cmTC_f95dc.dir/build]
+  ignore line: [make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o   -c /home/jiawei/clion-2018.2.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_f95dc]
+  ignore line: [/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f95dc.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o  -o cmTC_f95dc ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
   ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.10' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.1-2ubuntu1~16.04' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
+  ignore line: [gcc version 5.4.1 20160904 (Ubuntu 5.4.1-2ubuntu1~16.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d6f7f' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6iE6BZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d6f7f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f95dc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccL0zFwH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f95dc /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc6iE6BZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccL0zFwH.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -95,7 +95,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d6f7f] ==> ignore
+    arg [cmTC_f95dc] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -107,7 +107,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_d6f7f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_f95dc.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -135,17 +135,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fc1db/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fc1db.dir/build.make CMakeFiles/cmTC_fc1db.dir/build
-make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fc1db.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_fc1db.dir/feature_tests.c.o   -c /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_fc1db
-/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc1db.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_fc1db.dir/feature_tests.c.o  -o cmTC_fc1db 
-make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_52275/fast"
+/usr/bin/make -f CMakeFiles/cmTC_52275.dir/build.make CMakeFiles/cmTC_52275.dir/build
+make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_52275.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_52275.dir/feature_tests.c.o   -c /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_52275
+/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52275.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_52275.dir/feature_tests.c.o  -o cmTC_52275 
+make[1]: Leaving directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -155,17 +155,17 @@ make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a248c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a248c.dir/build.make CMakeFiles/cmTC_a248c.dir/build
-make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a248c.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_a248c.dir/feature_tests.c.o   -c /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_a248c
-/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a248c.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_a248c.dir/feature_tests.c.o  -o cmTC_a248c 
-make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f73bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f73bd.dir/build.make CMakeFiles/cmTC_f73bd.dir/build
+make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f73bd.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_f73bd.dir/feature_tests.c.o   -c /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f73bd
+/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f73bd.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_f73bd.dir/feature_tests.c.o  -o cmTC_f73bd 
+make[1]: Leaving directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -175,17 +175,17 @@ make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6d812/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6d812.dir/build.make CMakeFiles/cmTC_6d812.dir/build
-make[1]: Entering directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6d812.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_6d812.dir/feature_tests.c.o   -c /home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_6d812
-/home/jiawei/Clion/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d812.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_6d812.dir/feature_tests.c.o  -o cmTC_6d812 
-make[1]: Leaving directory '/home/jiawei/Documents/CLionProjects/DES/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_de104/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de104.dir/build.make CMakeFiles/cmTC_de104.dir/build
+make[1]: Entering directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de104.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_de104.dir/feature_tests.c.o   -c /home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_de104
+/home/jiawei/clion-2018.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de104.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_de104.dir/feature_tests.c.o  -o cmTC_de104 
+make[1]: Leaving directory '/home/jiawei/Desktop/des_c/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes

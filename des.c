@@ -91,6 +91,25 @@ const uint8_t ebox[] = {32, 1, 2, 3, 4, 5, 4, 5,
                         28, 29, 28, 29, 30, 31, 32, 1};
 
 
+const uint8_t ptable[] = {16, 7, 20, 21,
+                          29, 12, 28, 17,
+                          1, 15, 23, 26,
+                          5, 18, 31, 10,
+                          2, 8, 24, 14,
+                          32, 27, 3, 9,
+                          19, 13, 30, 6,
+                          22, 11, 4, 25};
+
+
+const uint8_t iptable_1[] = {40, 8, 48, 16, 56, 24, 64, 32,
+                             39, 7, 47, 15, 55, 23, 63, 31,
+                             38, 6, 46, 14, 54, 22, 62, 30,
+                             37, 5, 45, 13, 53, 21, 61, 29,
+                             36, 4, 44, 12, 52, 20, 60, 28,
+                             35, 3, 43, 11, 51, 19, 59, 27,
+                             34, 2, 42, 10, 50, 18, 58, 26,
+                             33, 1, 41, 9, 49, 17, 57, 25};
+
 void convertStr2Hex(char *key, uint64_t *binKey) {
     *binKey = 0;
     char hashStr2Num[] = "0123456789ABCDEF";
@@ -151,9 +170,9 @@ void genSubKey(uint64_t *binKey, uint64_t *subKey) {
 }
 
 
-void encodeData(uint64_t *subKey, uint64_t *m) {
+void encodeData(uint64_t *subKey, uint64_t *m, uint64_t *c) {
     uint64_t *ip = malloc(sizeof(uint64_t));
-    uint64_t ln, rn, ln_1, rn_1, Ern_1, temp, local;
+    uint64_t ln, rn, ln_1, rn_1, Ern_1, temp, local6bits, f, rl, ip_1;
     int i, j;
     int len_iptable = sizeof(ip_table) / sizeof(uint8_t);
     for (i = 0; i < len_iptable; i++) {
@@ -163,10 +182,9 @@ void encodeData(uint64_t *subKey, uint64_t *m) {
 
     ln_1 = (*ip >> 32) & 0xffffffff;
     rn_1 = *ip & 0xffffffff;
-    //printf("%jX\n", *ip);
 
-    for (i = 0; i < 1; i++) {
-        Ern_1 =0;
+    for (i = 0; i < 16; i++) {
+        Ern_1 = 0;
         for (j = 0; j < 48; j++) {
             Ern_1 <<= 1;
             Ern_1 |= (rn_1 >> (32 - ebox[j])) & 0x01;
@@ -176,16 +194,27 @@ void encodeData(uint64_t *subKey, uint64_t *m) {
         // sbox
         temp = 0;
         for (j = 0; j < 8; j++) {
-            local = (Ern_1 >> (j - 1) * 6) & 0x3f;
-            sbox[j][][];
+            local6bits = (Ern_1 >> (7 - j) * 6) & 0x3f;
+            temp <<= 4;
+            temp |= sbox[j][((local6bits >> 4) & 0x2) | (local6bits & 0x1)][(local6bits & 0x1e) >> 1];
+        }
+        // ptable
+        f = 0;
+        for (j = 0; j < 32; j++) {
+            f <<= 1;
+            f |= (temp >> (32 - ptable[j])) & 0x01;
         }
 
-
-        //printf("%jx\n", Ern_1);
         ln = rn_1;
-        rn = ln_1 ^ 1;
+        rn = ln_1 ^ f;
         ln_1 = ln;
         rn_1 = rn;
+    }
+    rl = ((rn & 0xffffffff) << 32) | (ln & 0xffffffff);
+
+    for (i = 0; i < 64; i++) {
+        *c <<= 1;
+        *c |= (rl >> (64 - iptable_1[i])) & 0x01;
     }
 }
 
@@ -199,14 +228,13 @@ void des(char *key) {
     genSubKey(binKey, subKey);
 
     uint64_t *m = malloc(sizeof(uint64_t));
+    uint64_t *c = malloc(sizeof(uint64_t));
     *m = 0x0123456789ABCDEF;
 
-    encodeData(subKey, m);
+    encodeData(subKey, m, c);
 
     free(binKey);
     free(subKey);
+    free(m);
+    free(c);
 }
-
-
-//011000010001011110111010100001100110010100100111
-//011000010001011110111010100001100110010100100111
