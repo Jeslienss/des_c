@@ -234,6 +234,7 @@ void proBlock(uint64_t *subKey, uint64_t *m, uint64_t *c, int flag) {
         *c <<= 1;
         *c |= (rl >> (64 - iptable_1[i])) & 0x1;
     }
+    free(ip);
 }
 
 
